@@ -21,6 +21,7 @@ const LoginPage = () => {
                 api.defaults.headers["authorization"] = "Bearer "+response.data.token;
                 setError("");
                 navigate("/");
+                return;
             }
             throw new Error(response.message);
         }catch(error){
