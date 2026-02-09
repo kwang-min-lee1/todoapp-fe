@@ -22,7 +22,7 @@ const RegisterPage = () => {
         if(response.status == 200) {
             navigate('/login');
         } else {
-            throw new Error(response.data.error)
+            throw new Error(response.data.error);
         }
     }catch(error){
         setError(error.message);
