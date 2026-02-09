@@ -23,9 +23,9 @@ const LoginPage = () => {
                 navigate("/");
                 return;
             }
-            throw new Error(response.message);
+          
         }catch(error){
-         setError(error.message);
+         setError(error?.message || error?.error || "아이디 또는 비밀번호가 일치하지 않습니다.");
     };
   };
 
